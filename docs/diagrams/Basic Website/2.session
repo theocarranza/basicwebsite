@@ -1,0 +1,14 @@
+window_sizes 1280 1000 290 984 843 104
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128002 // Home
+    980 843 119 A4 84 0
+end
+show_stereotypes
+selected class_ref 128130 // about
+open
+  class_ref 128002 // Home
+  attribute_ref 128514 // title
+  attribute_ref 128386 // email
+end
+end

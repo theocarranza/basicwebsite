@@ -1,0 +1,11 @@
+{
+    "skills": [
+        { "name": "PHP/Zend", "value": 100 },
+        { "name": "Python/Django", "value": 50 },
+        { "name": "JavaScript/Ext JS", "value": 50 },
+        { "name": "JavaScript/Angular4", "value": 40 },
+        { "name": "RDB/MySQL", "value": 70 },
+        { "name": "SQL/MySQL", "value": 80 },
+        { "name": "Git", "value": 50 }
+    ]
+}
