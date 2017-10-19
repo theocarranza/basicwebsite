@@ -1,0 +1,101 @@
+<div class="container">
+    <section class="section-about">
+        <h1> {{section_about.title}} </h1>
+        <div class="well">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div>
+                        <h1>{{section_about.header}}</h1>
+                        <div class="col-md-4 col-sm-12">
+                            <a href="#">
+                                <img src="../assets/images/theocarranza.jpg" class="center-block img-fluid my-3 rounded-circle">
+                                <h3 class="text-center">{{section_about.name}}</h3>
+                                <p class="text-center">{{section_about.job_title}}</p>
+                            </a>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <p class="text-justify">
+                                {{section_about.text}}
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- <div class="col-md-6 col-sm-12">
+                    <div>
+                        <h1> {{panel_services_header}} </h1>
+                        <div class="row">
+                            <div class="col-6">
+                                <ol>
+                                    <li *ngFor="let skill of skills_list">
+                                        <p>{{skill.name}}</p>
+                                    </li>
+                                </ol>
+
+                            </div>
+                            <div class="col-6">
+                                <div *ngFor="let skill of skills_list" class="progress">
+                                    <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%': skill.value, 'height.px': 100, 'aria-valuenow': 70 }" aria-valuemin="0" aria-valuemax="100">
+                                        <p>{{skill.value}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div> -->
+
+            </div>
+            <a [routerLink]="['sobre-theo-carranza']"><button class="btn btn-primary">Leia mais</button></a>
+
+        </div>
+    </section>
+
+    <section class="section-services">
+        <h1> {{section_services.title}} </h1>
+
+        <div class="card-deck">
+
+            <div class="card" *ngFor="let service of services_list">
+
+                <div class="card-header text-center">
+                    <h2> {{service.title}} </h2>
+                    <figure>
+                        <img class="card-img-top rounded-circle" src={{service.img}}>
+                    </figure>
+                </div>
+                <div class="card-body text-dark">
+                    <h4 class="card-title"> {{service.card_title}} </h4>
+                    <p class="card-text"> {{service.text_service}} </p>
+                    <button class="btn btn-primary">Leia mais</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-services">
+        <h1>{{section_portfolio.title}}</h1>
+        <div class="card-deck">
+
+            <div class="card" *ngFor="let portfolio of portfolio_list">
+
+                <div class="card-header text-center">
+                    <h2> {{portfolio.title}} </h2>
+                    <figure>
+                        <img class="card-img-top rounded-circle" src={{portfolio.img}}>
+                    </figure>
+                </div>
+                <div class="card-body text-dark">
+                    <h4 class="card-title"> {{portfolio.card_title}} </h4>
+                    <p class="card-text"> {{portfolio.text_service}} </p>
+                    <button class="btn btn-primary">Leia mais</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
