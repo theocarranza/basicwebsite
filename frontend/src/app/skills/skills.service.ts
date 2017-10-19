@@ -12,7 +12,7 @@ export class SkillsService {
 
   constructor(private http: Http) { }
 
-  getList(): Promise<Skills[]> {
+  getList(): Promise<Object[]> {
     return this.http.get('.././assets/data/skills.json')
       .toPromise()
       .then(skills => skills.json())

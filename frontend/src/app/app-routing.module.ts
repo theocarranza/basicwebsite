@@ -1,3 +1,4 @@
+import { SkillsListComponent } from './skills/skills-list/skills-list.component';
 import { SkillsComponent } from './skills/skills.component';
 import { HomeComponent } from './home/home.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'theo-carranza-skills',
     component: SkillsComponent
+  },
+  {
+    path: 'theo-carranza-skills-list',
+    component: SkillsListComponent
   },
   {
     path: '',
