@@ -15,8 +15,8 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit() {
     this.skillsService.getList()
-      .then(skills => this.skills = Array.from(skills))
-      .then(skills => console.log(skills))
+      .then(skills => this.skills = skills)
+
   }
 
 }

@@ -15,15 +15,6 @@ export class SkillsListComponent implements OnInit {
 
   constructor(private skillsService: SkillsService) { }
 
-  ngOnInit() {
-    const p = this.skillsService.getList()
-      .then((skills) => this.skills = skills)
-  }
-
-  printSkills(skills): void {
-    for (const skill of skills) {
-      console.log(skill)
-    }
-  }
+  ngOnInit() { }
 
 }
