@@ -1,11 +1,14 @@
-import { SkillsListComponent } from './skills/skills-list/skills-list.component';
-import { SkillsComponent } from './skills/skills.component';
-import { HomeComponent } from './home/home.component';
-import { AboutMeComponent } from './about-me/about-me.component';
+
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { SkillDetailComponent } from 'app/skills/skill-detail/skill-detail.component';
+import { SkillsListComponent } from './skills/skills-list/skills-list.component';
+import { SkillsComponent } from './skills/skills.component';
+import { HomeComponent } from './home/home.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 const routes: Routes = [
   {
@@ -13,11 +16,15 @@ const routes: Routes = [
     component: AboutMeComponent,
   },
   {
-    path: 'theo-carranza-skills',
-    component: SkillsComponent
+    path: 'skills',
+    component: SkillsComponent,
   },
   {
-    path: 'theo-carranza-skills-list',
+    path: 'skill-detail/:skill_id',
+    component: SkillDetailComponent
+  },
+  {
+    path: 'skills-list',
     component: SkillsListComponent
   },
   {

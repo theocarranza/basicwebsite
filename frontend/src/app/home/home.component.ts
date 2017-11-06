@@ -1,20 +1,23 @@
+import { SkillsService } from './../skills/skills.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
+  providers: [SkillsService],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
   /* @todo structure the sections using an objetct */
-  section_about: {};
-  section_portfolio: {};
-  section_services: {};
-  skills_list: {};
-  services_list: {};
-  portfolio_list: {};
+  private section_about: {};
+  private section_portfolio: {};
+  private section_services: {};
+  private services_list: {};
+  private portfolio_list: {};
+  private skills_list: {};
+  private page: {};
 
-  constructor() {
+  constructor(private skillsService: SkillsService) {
     this.section_about = {
       'title': 'Quem Sou eu?',
       'header': 'Um pouco sobre mim',
@@ -90,6 +93,11 @@ export class HomeComponent implements OnInit {
 
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+    this.skillsService.getList()
+    .subscribe(response => this.skills_list = response)
+    // .subscribe(response => console.log(response))
+  }
 
 }

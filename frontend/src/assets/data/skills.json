@@ -1,11 +1,53 @@
 {
-    "skills": [
-        { "name": "PHP/Zend", "value": 100 },
-        { "name": "Python/Django", "value": 50 },
-        { "name": "JavaScript/Ext JS", "value": 50 },
-        { "name": "JavaScript/Angular4", "value": 40 },
-        { "name": "RDB/MySQL", "value": 70 },
-        { "name": "SQL/MySQL", "value": 80 },
-        { "name": "Git", "value": 50 }
+    "skills-page": [
+        {
+            "header": "Skills",
+            "subtitle": "Skills que eu domino",
+            "description": "Uma lista de skills nos quais sou proficiente",
+            "url": "/skills",
+            "image": ".././assets/images/website.png",
+            "skills-list": [
+                {
+                    "name": "PHP/Zend",
+                    "value": 100,
+                    "description": "Framework da Zend, mantenedora oficial da Linguagem PHP, usado para implementar a arquitetura MVC em aplicações escritas em PHP."
+                },
+                {
+                    "name": "Python/Django",
+                    "value": 50,
+                    "description": "Framework da Zend, mantenedora oficial da Linguagem PHP, usado para implementar a arquitetura MVC em aplicações escritas em PHP."
+                },
+                {
+                    "name": "JavaScript/Ext JS",
+                    "value": 50,
+                    "description": "Framework da Zend, mantenedora oficial da Linguagem PHP, usado para implementar a arquitetura MVC em aplicações escritas em PHP."
+
+                },
+                {
+                    "name": "JavaScript/Angular4",
+                    "value": 40,
+                    "description": "Framework da Zend, mantenedora oficial da Linguagem PHP, usado para implementar a arquitetura MVC em aplicações escritas em PHP."
+
+                },
+                {
+                    "name": "RDB/MySQL",
+                    "value": 70,
+                    "description": "Framework da Zend, mantenedora oficial da Linguagem PHP, usado para implementar a arquitetura MVC em aplicações escritas em PHP."
+
+                },
+                {
+                    "name": "SQL/MySQL",
+                    "value": 80,
+                    "description": "Framework da Zend, mantenedora oficial da Linguagem PHP, usado para implementar a arquitetura MVC em aplicações escritas em PHP."
+
+                },
+                {
+                    "name": "Git",
+                    "value": 50,
+                    "description": "Framework da Zend, mantenedora oficial da Linguagem PHP, usado para implementar a arquitetura MVC em aplicações escritas em PHP."
+
+                }
+            ]
+        }
     ]
 }

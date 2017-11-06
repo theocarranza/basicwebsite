@@ -1,5 +1,9 @@
+import { SkillsListComponent } from './skills-list/skills-list.component';
+import { Page } from './../page/page.model';
 import { Component, OnInit } from '@angular/core';
 import { SkillsService } from './skills.service';
+import { PageComponent } from './../page/page.component';
+
 
 @Component({
   selector: 'app-skills',
@@ -8,15 +12,20 @@ import { SkillsService } from './skills.service';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  public skills: Object[];
 
-  constructor(private skillsService: SkillsService) {
-  }
+  private skills_list: Object[];
+  private page: Object[];
+
+  constructor(private skillsService: SkillsService) { }
+
 
   ngOnInit() {
     this.skillsService.getList()
-      .then(skills => this.skills = Array.from(skills))
-      .then(skills => console.log(skills))
+      .subscribe(skills_list => this.skills_list = skills_list)
+      // .subscribe(res => console.log(res))
+
+    this.skillsService.getPage()
+      .subscribe(page => this.page = page)
   }
 
 }

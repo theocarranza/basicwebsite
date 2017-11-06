@@ -11,19 +11,15 @@ import { Skills } from './../skills.model';
 })
 
 export class SkillsListComponent implements OnInit {
-  public skills;
+
+  public skills_list: Object[];
 
   constructor(private skillsService: SkillsService) { }
 
   ngOnInit() {
-    const p = this.skillsService.getList()
-      .then((skills) => this.skills = skills)
-  }
-
-  printSkills(skills): void {
-    for (const skill of skills) {
-      console.log(skill)
-    }
-  }
+    this.skillsService.getList()
+    .subscribe(skills_list => this.skills_list = skills_list)
+    // .subscribe(response => console.log(response))
+   }
 
 }
