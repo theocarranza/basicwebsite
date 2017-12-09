@@ -1,5 +1,6 @@
 {
     "skills": [
+
         { "name": "PHP/Zend", "value": 100 },
         { "name": "Python/Django", "value": 50 },
         { "name": "JavaScript/Ext JS", "value": 50 },

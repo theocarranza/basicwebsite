@@ -1,7 +1,9 @@
+import { SkillsService } from './../skills/skills.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
+  providers: [SkillsService],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -10,11 +12,12 @@ export class HomeComponent implements OnInit {
   section_about: {};
   section_portfolio: {};
   section_services: {};
-  skills_list: {};
   services_list: {};
   portfolio_list: {};
 
-  constructor() {
+  public skills: Object[];
+
+  constructor(private skillsService: SkillsService) {
     this.section_about = {
       'title': 'Quem Sou eu?',
       'header': 'Um pouco sobre mim',
@@ -90,6 +93,9 @@ export class HomeComponent implements OnInit {
 
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.skillsService.getList()
+      .then(skills => this.skills = skills)
+  }
 
 }
